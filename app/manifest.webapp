@@ -1,0 +1,10 @@
+{
+    "launch_path":"/index.html",
+    "installs_allowed_from":["*"],
+    "version":"3.0.0",
+    "name":"dgBase",
+    "pkgName":"com.doersguild.dgBase",
+    "icons": {
+        "128": "/images/yeoman.png"
+    }
+}

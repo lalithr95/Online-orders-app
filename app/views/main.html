@@ -1,0 +1,14 @@
+<header ng-include="'views/blocks/header.html'"></header>
+<main>
+  <h1>Welcome</h1>
+  <p class="alert alert-info" ng-if="loadingLocation">Please wait while we fetch your location.</p>
+  <p class="alert alert-block alert-warning" ng-if="errInLocation">An error occured in fetching your current location: "{{errInLocation}}"</p>
+  <p> 
+    You are currently at {{currentLatLng}}
+    <br/>
+    <br/>
+    <button ng-if="!loadingLocation" ng-click="fetchCurrentLocation()" class="btn btn-primary">{{errInLocation?'Retry':'Refresh'}}</button>
+  </p>
+  <br/>
+</main>
+<footer ng-include="'views/blocks/footer.html'"></footer>

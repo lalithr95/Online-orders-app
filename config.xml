@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<widget id="com.doersguild.dgbase" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+
+    <name>dgBase</name>
+
+    <description>
+        The base app format for a web+hybrid project.
+    </description>
+
+    <author email="mail@doersguild.com" href="http://www.doersguild.com/">
+        Doers' Guild
+    </author>
+
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+    <feature name="http://api.phonegap.com/1.0/network" />
+    <feature name="http://api.phonegap.com/1.0/media"/>
+
+    <preference name="orientation" value="default" />
+    <preference name="target-device" value="universal" />
+    <preference name="fullscreen" value="false" />
+    <preference name="webviewbounce" value="false" />
+    <preference name="prerendered-icon" value="true" />
+    <preference name="stay-in-webview" value="false" />
+    <preference name="detect-data-types" value="true" />
+    <preference name="exit-on-suspend" value="false" />
+    <preference name="show-splash-screen-spinner" value="true" />
+    <preference name="auto-hide-splash-screen" value="false" />
+    <preference name="disable-cursor" value="false" />
+    <preference name="android-installLocation" value="auto" />
+    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-targetSdkVersion" value="22" />
+
+
+    <icon src="www/res/icon/icon.png" />
+    <icon platform="firefoxos" height="128" width="128" src="www/res/icon/icon-128.png" />
+    <icon gap:density="ldpi" gap:platform="android" src="www/res/icon/android/icon-36-ldpi.png" />
+    <icon gap:density="mdpi" gap:platform="android" src="www/res/icon/android/icon-48-mdpi.png" />
+    <icon gap:density="hdpi" gap:platform="android" src="www/res/icon/android/icon-72-hdpi.png" />
+    <icon gap:density="xhdpi" gap:platform="android" src="www/res/icon/android/icon-96-xhdpi.png" />
+
+    <gap:splash src="www/res/screen/splash.png" />
+    <gap:splash gap:density="ldpi" gap:platform="android" src="www/res/screen/android/screen-ldpi-portrait.png" />
+    <gap:splash gap:density="mdpi" gap:platform="android" src="www/res/screen/android/screen-mdpi-portrait.png" />
+    <gap:splash gap:density="hdpi" gap:platform="android" src="www/res/screen/android/screen-hdpi-portrait.png" />
+    <gap:splash gap:density="xhdpi" gap:platform="android" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+
+    <content src="index.html" />
+    
+    <access origin="*" subdomains="true" />
+</widget>

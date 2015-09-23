@@ -1,0 +1,22 @@
+<div class="header">
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle btn-shadow" ng-click="mainHeaderNavIsCollapsed = !mainHeaderNavIsCollapsed" ng-init="mainHeaderNavIsCollapsed = true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-bars fa-large"></i>
+                </button>
+                <a ng-href="#" class="navbar-brand">
+                    <span  ng-show="httpRequestInProgress" class="pull-left"><i class="fa fa-spin fa-spinner"></i></span>&nbsp;
+                    dgBase
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainHeaderCollapseNav" collapse="mainHeaderNavIsCollapsed">
+                <ul class="nav navbar-nav navbar-right">
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="alert alert-warning" ng-show="!online">Your device might be offline or the server might be experiencing issues. Some features of the app might not work properly until you go back online.</div>
