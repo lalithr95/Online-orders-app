@@ -3,7 +3,7 @@
 describe('Controller: MenudatactrlCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('dgBaseApp'));
+  beforeEach(module('theFirstMealApp'));
 
   var MenudatactrlCtrl,
     scope;

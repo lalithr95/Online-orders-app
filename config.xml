@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <widget id="com.doersguild.dgbase" version="3.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
 
-    <name>dgBase</name>
+    <name>The First Meal</name>
 
     <description>
-        The base app format for a web+hybrid project.
+        The First Meal Ordering App.
     </description>
 
     <author email="mail@doersguild.com" href="http://www.doersguild.com/">

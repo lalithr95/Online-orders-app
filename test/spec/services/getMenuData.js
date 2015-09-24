@@ -3,7 +3,7 @@
 describe('Service: getMenuData', function () {
 
   // load the service's module
-  beforeEach(module('dgBaseApp'));
+  beforeEach(module('theFirstMealApp'));
 
   // instantiate service
   var getMenuData;
