@@ -1,6 +1,7 @@
 <header ng-include="'views/blocks/header.html'"></header>
-<p>This is the menudata-view view.</p>
-<div ng-app="dgBaseApp" ng-controller="MenudataCtrl">
-	<p>{{menudata}}</p>
+<div class="alert alert-info" ng-show="loading">Loading ... Please wait</div>
+<div>
+    <pre><code>{{menuData}}</code></pre>
+    <br/>
 </div>
 <footer ng-include="'views/blocks/footer.html'"></footer>

@@ -1,13 +1,13 @@
 'use strict';
 /**
  * @ngdoc overview
- * @name dgBaseApp
+ * @name theFirstMealApp
  * @description
- * # dgBaseApp
+ * # theFirstMealApp
  *
  * Main module of the application.
  */
-angular.module('dgBaseApp', [
+angular.module('theFirstMealApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -16,13 +16,14 @@ angular.module('dgBaseApp', [
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngCordova'
+    'ngCordova',
+    'ui.bootstrap'
   ])
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
-        })
+                templateUrl: 'views/menudata-view.html',
+                controller: 'MenudatactrlCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -32,13 +33,13 @@ angular.module('dgBaseApp', [
         // Online or offline
         $rootScope.online = navigator.onLine;
         var wentOffline = function () {
-            $rootScope.$apply(function () {
-                $rootScope.online = false;
-            });
-            $document.scrollTop(0, 250, function (t) {// EaseOut Cubic
-                return (--t) * t * t + 1;
-            });
-        },
+                $rootScope.$apply(function () {
+                    $rootScope.online = false;
+                });
+                $document.scrollTop(0, 250, function (t) { // EaseOut Cubic
+                    return (--t) * t * t + 1;
+                });
+            },
             wentOnline = function () {
                 $rootScope.$apply(function () {
                     $rootScope.online = true;

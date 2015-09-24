@@ -1,5 +1,5 @@
 'use strict';
-angular.module('dgBaseApp')
+angular.module('theFirstMealApp')
     .factory('deviceReady', ['$window',
         function ($window) {
             return function (fn) {

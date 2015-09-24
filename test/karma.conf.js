@@ -22,9 +22,7 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // bower:js
-      'app/bower_components/jquery/dist/jquery.js',
       'app/bower_components/angular/angular.js',
-      'app/bower_components/bootstrap/dist/js/bootstrap.js',
       'app/bower_components/angular-animate/angular-animate.js',
       'app/bower_components/angular-aria/angular-aria.js',
       'app/bower_components/angular-cookies/angular-cookies.js',
@@ -34,6 +32,7 @@ module.exports = function(config) {
       'app/bower_components/angular-sanitize/angular-sanitize.js',
       'app/bower_components/angular-touch/angular-touch.js',
       'app/bower_components/ngCordova/dist/ng-cordova.js',
+      'app/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
       'app/bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

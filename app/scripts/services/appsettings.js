@@ -1,8 +1,8 @@
 'use strict';
-angular.module('dgBaseApp')
+angular.module('theFirstMealApp')
     .constant('appSettings', {
-        'baseURL': '/Application/Documents/programs/platform/app/Http/Controllers/API',
+        'baseURL': 'http://localhost:8086/TheFirstMeal/public/api',
         'api': {
-            'heartbeat': '/heartbeat'
+            'menuData': '/menu-data'
         }
     });

@@ -17,7 +17,4 @@ describe('Controller: MenudatactrlCtrl', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(MenudatactrlCtrl.awesomeThings.length).toBe(3);
-  });
 });

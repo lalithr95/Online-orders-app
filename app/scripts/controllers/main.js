@@ -1,12 +1,12 @@
 'use strict';
 /**
  * @ngdoc function
- * @name dgBaseApp.controller:MainCtrl
+ * @name theFirstMealApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the dgBaseApp
+ * Controller of the theFirstMealApp
  */
-angular.module('dgBaseApp')
+angular.module('theFirstMealApp')
     .controller('MainCtrl', function ($scope, geolocation, $window) {
         $scope.currentLatLng = 'An Unknown Location';
         $scope.errInLocation = false;

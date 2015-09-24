@@ -1,5 +1,5 @@
 'use strict';
-angular.module('dgBaseApp')
+angular.module('theFirstMealApp')
     .factory('geolocation', ['$rootScope', 'deviceReady', '$window',
         function ($rootScope, deviceReady, $window) {
             return {
