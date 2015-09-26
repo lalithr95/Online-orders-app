@@ -24,6 +24,10 @@ angular.module('theFirstMealApp', [
                 templateUrl: 'views/menudata-view.html',
                 controller: 'MenudatactrlCtrl'
             })
+            .when('/main', {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
