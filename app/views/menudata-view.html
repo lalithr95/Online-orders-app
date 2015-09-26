@@ -1,9 +1,14 @@
 <header ng-include="'views/blocks/header.html'"></header>
 <main>
 	<div class="alert alert-info" ng-show="loading">Loading ... Please wait</div>
-	<div>
-		<!-- for Date location cart -->
+	<div class="row">
+		<div class=" col-md-offset-10">
+			<span class="glyphicon glyphicon-shopping-cart"> Checkout {{ count }}</span>
+			<ngcart-summary></ngcart-summary>
+		</div>
 	</div>
+		<!-- for Date location cart -->
+	<br>
 	<div class="row">
 		<div class="col-sm-6 col-md-4" ng-repeat="item in menuData.items">
 		    <div class="thumbnail">
@@ -11,6 +16,13 @@
 		      <div class="caption">
 		        <h3>{{ item.name }}</h3>
 		        <p> {{ item.description }} </p>
+		        <p> {{ item.price | currency }} </p>
+		        <div ng-if="cart[item.name] > 0 ">
+		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ cart[item.name] }} I'll have another one </button>
+		        </div>
+		        <div ng-if="!cart[item.name]">
+		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ cart[item.name] }} I'll have this </button>
+		        </div>
 		      </div>
 		    </div>
 		</div>
@@ -22,6 +34,7 @@
 				<div class="caption">
 					<h3>{{ package.name }}</h3>
 					<p> {{ package.description }} </p>
+					<button type="button" class="btn btn-danger" ng-click="addPackage($index)"> I'll subscribe this !</button>
 				</div>
 			</div>
 		</div>
