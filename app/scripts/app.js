@@ -17,7 +17,8 @@ angular.module('theFirstMealApp', [
     'ngSanitize',
     'ngTouch',
     'ngCordova',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngStorage'
   ])
     .config(function ($routeProvider) {
         $routeProvider.when('/', {
