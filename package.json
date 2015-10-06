@@ -1,7 +1,9 @@
 {
   "name": "the-first-meal",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "masonry-layout": "^3.3.2"
+  },
   "repository": {},
   "devDependencies": {
     "grunt": "^0.4.5",
