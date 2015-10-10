@@ -3,8 +3,10 @@
 	<div class="alert alert-info" ng-show="loading">Loading ... Please wait</div>
 	<div class="row">
 		<div class=" col-md-offset-10">
-			<span class="glyphicon glyphicon-shopping-cart"> Checkout {{ $storage.count }}</span>
-			<ngcart-summary></ngcart-summary>
+			<a href="http://localhost:9000/#/checkout" class="btn btn-info">
+				<span class="glyphicon glyphicon-shopping-cart"> Checkout {{ $storage.count }}</span>
+				<ngcart-summary></ngcart-summary>
+			</a>
 		</div>
 	</div>
 		<!-- for Date location cart -->
@@ -17,11 +19,11 @@
 		        <h3>{{ item.name }}</h3>
 		        <p> {{ item.description }} </p>
 		        <p> {{ item.price | currency }} </p>
-		        <div ng-if="$storage.cart[item.name] > 0 ">
-		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ $storage.cart[item.name] }} I'll have another one </button>
+		        <div ng-if="$storage.cart[item.name] ">
+		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ $storage.cart[item.name].count }} I'll have another one </button>
 		        </div>
 		        <div ng-if="!$storage.cart[item.name]">
-		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ $storage.cart[item.name] }} I'll have this </button>
+		        	<button type="button" class="btn btn-info" ng-click="addItem($index)"> {{ $storage.cart[item.name].count }} I'll have this </button>
 		        </div>
 		      </div>
 		    </div>

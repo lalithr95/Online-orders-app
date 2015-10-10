@@ -11,7 +11,8 @@ angular.module('theFirstMealApp')
         $scope.menuData = {};
         $scope.$storage = $localStorage.$default({
                 cart: {},
-                count: 0
+                count: 0,
+                price: 0.00,
             });
         $scope.appSettings = appSettings;
         $scope.loading = true;
@@ -28,24 +29,35 @@ angular.module('theFirstMealApp')
                 });
         }, 0);
         $scope.addItem = function(index) {
-            if ( $scope.$storage.cart[$scope.menuData.items[index].name] > 0) {
-                $scope.$storage.cart[$scope.menuData.items[index].name]++;
+            if ( $scope.$storage.cart[$scope.menuData.items[index].name]) {
+                $scope.$storage.cart[$scope.menuData.items[index].name].count++;
+                $scope.$storage.price += $scope.menuData.items[index].price;
             }
             else {
-                $scope.$storage.cart[$scope.menuData.items[index].name] = 1;
+                $scope.$storage.cart[$scope.menuData.items[index].name] = {};
+                $scope.$storage.cart[$scope.menuData.items[index].name].price = $scope.menuData.items[index].price;
+                $scope.$storage.cart[$scope.menuData.items[index].name].count = 1;
+                $scope.$storage.price += $scope.menuData.items[index].price;
             }
             $scope.$storage.count++;
             console.log($scope.$storage.cart);
         };
         $scope.addPackage = function(index) {
-            if ( $scope.$storage.cart[$scope.menuData.packages[index].name] > 0) {
-                $scope.$storage.cart[$scope.menuData.packages[index].name]++;
+            if ( $scope.$storage.cart[$scope.menuData.packages[index].name]) {
+                $scope.$storage.cart[$scope.menuData.packages[index].name].count++;
+                $scope.$storage.price += $scope.menuData.packages[index].price;
             }
             else {
-                $scope.$storage.cart[$scope.menuData.packages[index].name] = 1;
+                $scope.$storage.cart[$scope.menuData.packages[index].name] = {};
+                $scope.$storage.cart[$scope.menuData.packages[index].name].price = $scope.menuData.items[index].price;
+                $scope.$storage.cart[$scope.menuData.packages[index].name].count = 1;
+                $scope.$storage.price += $scope.menuData.packages[index].price;
             }
             $scope.$storage.count++;
             console.log($scope.$storage.cart);  
+        };
+        var getStorage = function() {
+            return $scope.$storage;
         };
         //TODO Need to implement the counter part
   }]);

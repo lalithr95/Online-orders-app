@@ -29,6 +29,10 @@ angular.module('theFirstMealApp', [
                 templateUrl: 'views/main.html',
                 controller: 'MainCtrl'
             })
+            .when('/checkout', {
+                templateUrl: 'views/checkout-view.html',
+                controller: 'CheckoutCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
