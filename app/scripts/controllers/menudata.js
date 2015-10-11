@@ -40,6 +40,7 @@ angular.module('theFirstMealApp')
                 $scope.$storage.cart[$scope.menuData.items[index].name].count = 1;
                 $scope.$storage.price += $scope.menuData.items[index].price;
                 $scope.$storage.cart[$scope.menuData.items[index].name].url = $scope.menuData.items[index].images[0].image_url;
+                $scope.$storage.cart[$scope.menuData.items[index].name].id = $scope.menuData.items[index].id;
 
             }
             $scope.$storage.count++;
@@ -57,6 +58,7 @@ angular.module('theFirstMealApp')
                 $scope.$storage.cart[$scope.menuData.packages[index].name].count = 1;
                 $scope.$storage.price += $scope.menuData.packages[index].price;
                 $scope.$storage.cart[$scope.menuData.packages[index].name].url = $scope.menuData.packages[index].images[0].image_url;
+                $scope.$storage.cart[$scope.menuData.packages[index].name].id = $scope.menuData.packages[index].id;
 
             }
             $scope.$storage.count++;
